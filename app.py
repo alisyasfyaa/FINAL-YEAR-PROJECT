@@ -262,7 +262,7 @@ if input_mode == "Video Upload" and uploaded_video is not None:
 # =========================
 if st.session_state.running and input_mode == "Live Camera":
 
-    cap = cv2.VideoCapture(cam_index)
+    cap = cv2.VideoCapture(cam_index, cv2.CAP_DSHOW)
     frame_id = 0
     frame_box = st.empty()
 
